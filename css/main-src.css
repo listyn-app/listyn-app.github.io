@@ -24,7 +24,7 @@ body {
     @apply flex items-center gap-6;
 }
 .hero-outer {
-    @apply max-w-screen flex justify-center;
+    @apply max-w-screen flex justify-center overflow-hidden -mx-8 sm:mx-auto;
 }
 .hero-container {
     @apply -mx-[60px] sm:mx-auto;
