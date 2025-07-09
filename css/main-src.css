@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1, "cv02", "cv03", "cv04", "cv11"; /* fix for Chrome */
+}
+@supports (font-variation-settings: normal) {
+    :root { font-family: InterVariable, sans-serif; }
+}
+
+body {
+    background-color: #fffef7;
+    height: 100%;
+}
+
+.page-container {
+    @apply px-8 py-8 flex flex-col min-h-full;
+}
+
+.header {
+    @apply flex justify-between;
+}
+.header-links {
+    @apply flex items-center gap-6;
+}
+.hero-container {
+
+    @apply -mx-20 sm:mx-auto;
+    @apply relative mt-8 pt-16 flex justify-center gap-3 max-h-[500px] min-h-[150px] overflow-hidden;
+}
+.hero-container-overlay {
+    @apply absolute bottom-0 bg-linear-to-t h-30 w-full from-[#fffef7] to-[#fffef7]/0;
+}
+.hero-item {
+    @apply w-[250px];
+}
+.hero-item-main {
+    @apply transform scale-[1.2];
+}
+
+.headline {
+    @apply mt-16 sm:text-5xl md:text-6xl text-center text-slate-700 text-3xl;
+    font-family: "EB Garamond", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.platform-badge-container {
+    @apply mt-8 flex items-center justify-center gap-2;
+}
+.platform-badge-item {
+    @apply size-8 flex items-center justify-center;
+}
+.platform-badge {
+    @apply max-h-full max-w-full;
+}
+.spacer {
+    @apply h-8 w-[1px] bg-slate-800;
+}
+
+
+.svg {
+    @apply fill-slate-800;
+}
+.dark {
+    @apply hidden;
+}
+
+.dark-mode {
+    @apply bg-slate-800;
+    .light {
+        @apply hidden;
+    }
+    .dark {
+        @apply block;
+    }
+    .svg, .platform-badge {
+        @apply fill-slate-200;
+    }
+    .spacer {
+        @apply bg-slate-200;
+    }
+    .headline {
+        @apply text-slate-200;
+    }
+
+    .hero-container-overlay {
+        @apply from-slate-800 to-slate-800/0;
+    }
+}
