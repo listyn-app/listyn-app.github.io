@@ -23,9 +23,11 @@ body {
 .header-links {
     @apply flex items-center gap-6;
 }
+.hero-outer {
+    @apply max-w-screen flex justify-center;
+}
 .hero-container {
-
-    @apply -mx-20 sm:mx-auto;
+    @apply -mx-[60px] sm:mx-auto;
     @apply relative mt-8 pt-16 flex justify-center gap-3 max-h-[500px] min-h-[150px] overflow-hidden;
 }
 .hero-container-overlay {
